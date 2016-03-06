@@ -13,7 +13,7 @@ require 'pi_piper'
 
 class Mcp3008Pi
 
-  def initialize(pin: 0, pins: [pin]; clock: 18, dout: 23, din: 24, cs: 25)
+  def initialize(pin: 0, pins: [pin], clock: 18, dout: 23, din: 24, cs: 25)
 
     @adc_pins = pins
 
@@ -37,7 +37,7 @@ class Mcp3008Pi
 
   def read()
     
-    a = @adc_pins.map { read_adc(@adc_pin, @clock, @adc_in, @adc_out, @cs) }
+    a = @adc_pins.map {|pin| read_adc(pin, @clock, @adc_in, @adc_out, @cs) }
     return a.first if a.length == 1
     
     return a

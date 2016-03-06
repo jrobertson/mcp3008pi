@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'mcp3008pi'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.summary = 'Reads analog values from an MCP3008 10-bit Analog-to-Digital Converter (ADC) connected to a Raspberry Pi'  
   s.authors = ['James Robertson']
   s.files = Dir['lib/mcp3008pi.rb']
